@@ -1,5 +1,5 @@
 /**
- * ng-context-menu - v1.0.1 - An AngularJS directive to display a context menu
+ * ng-context-menu - v1.0.2 - An AngularJS directive to display a context menu
  * when a right-click event is triggered
  *
  * @author Ian Kennington Walter (http://ianvonwalter.com)
@@ -119,6 +119,7 @@
 
             $scope.$on('$destroy', function() {
               //console.log('destroy');
+              close(ContextMenuService.menuElement);
               $document.unbind('keyup', handleKeyUpEvent);
               $document.unbind('click', handleClickEvent);
               $document.unbind('contextmenu', handleClickEvent);
