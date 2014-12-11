@@ -60,7 +60,9 @@
             }
 
             function close(menuElement) {
-              menuElement.removeClass('open');
+              if (menuElement) {
+                menuElement.removeClass('open');
+              }
 
               if (opened) {
                 $scope.closeCallback();
